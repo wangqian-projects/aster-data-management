@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:aster-mysql}:${MYSQL_PORT:3306}/${MYSQL_DB:aster-config}?useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: root
+    password: 123456
+
+logging:
+  level:
+    com.aster.cloud: debug
+
+feign:
+  hystrix:
+    enabled: true
